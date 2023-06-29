@@ -3,7 +3,7 @@ services:
   main:
     image: 'yuinakorn/py_api_cmphoweb_gunicorn:latest'
     ports:
-      - '8055:8000'
+      - '8005:8000'
     volumes:
       - './:/app'
     restart: 'unless-stopped'
