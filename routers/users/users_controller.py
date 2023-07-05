@@ -25,7 +25,7 @@ def login(user: str, password: str):
     try:
         connection = get_connection()
         with connection.cursor() as cursor:
-            sql = "SELECT pid,username,password,t_name,f_name,s_name,position,off_id,div_code,status_id,date_register,date_approve " \
+            sql = "SELECT pid,username,t_name,f_name,s_name,position,off_id,div_code,status_id,date_register,date_approve " \
                   " FROM member WHERE username = %s AND password = %s"
             cursor.execute(sql, (user, password_hash))
             result = cursor.fetchone()
